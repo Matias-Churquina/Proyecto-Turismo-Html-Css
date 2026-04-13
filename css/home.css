@@ -1,0 +1,24 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y fondo */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f5f7f6; /* color claro */
+    color: #333;
+}
+
+/* Contenedor principal */
+main {
+    padding: 20px;
+}
+
+/* Links generales */
+a {
+    text-decoration: none;
+    color: inherit;
+}
