@@ -1,0 +1,11 @@
+header {
+    background: var(--color-principal);
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+}
