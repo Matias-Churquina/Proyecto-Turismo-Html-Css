@@ -13,14 +13,24 @@
 </head>
 
 <body>
-    <header>
+        <header>
         <h1>Turismo</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="destinos.html">Destinos</a>
+
+            <div class="dropdown">
+                <a href="destinos.html">Destinos</a>
+
+                <div class="dropdown-content">
+                    <a href="#">Playas</a>
+                    <a href="#">Montañas</a>
+                    <a href="#">Ciudades</a>
+                </div>
+            </div>
+
             <a href="agencias.html">Agencias</a>
-            <a href="contacto.html">Contacto</a>
             <a href="precios.html">Precios</a>
+            <a href="contacto.html">Contacto</a>
             <a href="blog.html">Blog</a>
         </nav>
     </header>
@@ -67,19 +77,18 @@
             <button id="cerrarModal">Cerrar</button>
         </div>
     </div>
-    <footer>
+<footer>
         <form>
             <input type="email" placeholder="Tu email">
             <button>Suscribirse</button>
         </form>
-    
+
         <div class="redes">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
+            <a href="#" class="btn facebook">Facebook</a>
+            <a href="#" class="btn instagram">Instagram</a>
         </div>
-    
-        <iframe src="https://www.google.com/maps/embed?...">
-        </iframe>
+
+        <iframe src="https://www.google.com/maps?q=Jujuy&output=embed"></iframe>
     </footer>
     <script src="js/contacto.js"></script>
 </body>

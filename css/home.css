@@ -67,11 +67,11 @@ a {
 .cards {
     display: flex;
     gap: 20px;
-    padding: 20px;
+    padding: 20px;text-align: center;
 }
 
 .card {
-    background: rgb(238, 255, 3);
+    background: rgb(156, 177, 185);
     border-radius: 10px;
     overflow: hidden;
     transition: 0.3s;
