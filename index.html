@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +12,28 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/contacto.css">
 </head>
+
 <body>
 
     <header>
         <h1>Turismo</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="destinos.html">Destinos</a>
-            <a href="agencias.html">Agencias</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="precios.html">Precios</a>
-            <a href="blog.html">Blog</a>
-        </nav>
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+        <a href="destinos.html">Destinos</a>
+
+        <div class="dropdown-content">
+            <a href="#">Playas</a>
+            <a href="#">Montañas</a>
+            <a href="#">Ciudades</a>
+        </div>
+    </div>
+
+    <a href="agencias.html">Agencias</a>
+    <a href="precios.html">Precios</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
     </header>
 
     <main>
@@ -31,7 +42,7 @@
             <video autoplay muted loop>
                 <source src="Contenido/HomeC/PinDown.io_@filholuciano053_1776106072.mp4" type="video/mp4">
             </video>
-        
+
             <div class="overlay">
                 <h2>Descubrí el mundo</h2>
                 <p>Viajes únicos e inolvidables</p>
@@ -43,22 +54,23 @@
                 <img src="Contenido/HomeC/playa.jpeg">
                 <h3>Playa</h3>
             </div>
-        
+
             <div class="card">
                 <img src="Contenido/HomeC/montana.jpeg">
                 <h3>Montaña</h3>
             </div>
         </section>
-        
+
         <section class="contador">
             <h2>500+ visitantes</h2>
         </section>
-        
+
         <section class="carousel">
             <div class="slides">
                 <div class="slide">"Excelente viaje!"</div>
                 <div class="slide">"Muy recomendable"</div>
                 <div class="slide">"Volvería sin dudar"</div>
+                <div class="slide">"Esta Pagina es increible!"</div>
             </div>
         </section>
 
@@ -69,15 +81,16 @@
             <input type="email" placeholder="Tu email">
             <button>Suscribirse</button>
         </form>
-    
+
         <div class="redes">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
+            <a href="#" class="btn facebook">Facebook</a>
+            <a href="#" class="btn instagram">Instagram</a>
         </div>
-    
-        <iframe src="https://www.google.com/maps/embed?...">
+
+        <iframe src="https://www.google.com/maps?q=Jujuy&output=embed">
         </iframe>
     </footer>
 
 </body>
+
 </html>
