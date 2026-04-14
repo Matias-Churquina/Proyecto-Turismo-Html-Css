@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios - Turismo</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/precios.css">
+</head>
+
+<body>
+
+    <!-- HEADER (igual al tuyo) -->
+    <header>
+        <h1>Turismo</h1>
+        <nav>
+            <a href="index.html">Home</a>
+
+            <div class="dropdown">
+                <a href="destinos.html">Destinos</a>
+
+                <div class="dropdown-content">
+                    <a href="#">Playas</a>
+                    <a href="#">Montañas</a>
+                    <a href="#">Ciudades</a>
+                </div>
+            </div>
+
+            <a href="agencias.html">Agencias</a>
+            <a href="precios.html">Precios</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="precios">
+        <h2>Comparador de Destinos</h2>
+
+        <table class="tabla-precios">
+            <thead>
+                <tr>
+                    <th>Destino</th>
+                    <th>Precio</th>
+                    <th>Incluye</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td data-label="Destino">Playa</td>
+                    <td data-label="Precio">$500</td>
+                    <td data-label="Incluye">
+                        Hotel + desayuno
+                        <span class="tooltip">ℹ
+                            <span class="tooltip-text">Incluye acceso ilimitado al hotel</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr class="destacado">
+                    <td data-label="Destino">Montaña</td>
+                    <td data-label="Precio">$400</td>
+                    <td data-label="Incluye">
+                        Excursiones
+                        <span class="tooltip">ℹ
+                            <span class="tooltip-text">Incluye guías y transporte</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="Destino">Ciudad</td>
+                    <td data-label="Precio">$300</td>
+                    <td data-label="Incluye">
+                        Tour cultural
+                        <span class="tooltip">ℹ
+                            <span class="tooltip-text">Museos y visitas guiadas</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="Destino">Selva</td>
+                    <td data-label="Precio">$450</td>
+                    <td data-label="Incluye">
+                        Aventura + guía
+                        <span class="tooltip">ℹ
+                            <span class="tooltip-text">Incluye caminatas y excursiones</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="Destino">Desierto</td>
+                    <td data-label="Precio">$350</td>
+                    <td data-label="Incluye">
+                        Safari
+                        <span class="tooltip">ℹ
+                            <span class="tooltip-text">Incluye transporte 4x4</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="Destino">Nieve</td>
+                    <td data-label="Precio">$600</td>
+                    <td data-label="Incluye">
+                        Ski + equipo
+                        <span class="tooltip">ℹ
+                            <span class="tooltip-text">Incluye alquiler de equipo completo</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="Destino">Crucero</td>
+                    <td data-label="Precio">$800</td>
+                    <td data-label="Incluye">
+                        Todo incluido
+                        <span class="tooltip">ℹ
+                            <span class="tooltip-text">Comidas, shows y actividades</span>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td data-label="Destino">Parque Temático</td>
+                    <td data-label="Precio">$550</td>
+                    <td data-label="Incluye">
+                        Entradas + hotel
+                        <span class="tooltip">ℹ
+                            <span class="tooltip-text">Acceso a todas las atracciones</span>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <!-- FOOTER (igual al tuyo) -->
+    <footer>
+        <form>
+            <input type="email" placeholder="Tu email">
+            <button>Suscribirse</button>
+        </form>
+
+        <div class="redes">
+            <a href="#" class="btn facebook">Facebook</a>
+            <a href="#" class="btn instagram">Instagram</a>
+        </div>
+
+        <iframe src="https://www.google.com/maps?q=Jujuy&output=embed"></iframe>
+    </footer>
+
+</body>
+
+</html>
