@@ -18,7 +18,39 @@ footer button {
 }
 
 iframe {
-    width: 100%;
+    width: 60%;
     height: 200px;
     margin-top: 15px;
+}
+
+/* Contenedor */
+.redes {
+    margin-top: 15px;
+}
+
+/* Botón base */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Facebook */
+.facebook {
+    background: #1877f2;
+}
+
+/* Instagram (degradado) */
+.instagram {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+/* Hover efecto */
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
