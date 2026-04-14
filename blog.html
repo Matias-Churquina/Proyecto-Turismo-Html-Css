@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Turismo | Blog</title>
+    <link rel="stylesheet" href="css/blog.css">
+     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <header>
+        <h1>Turismo</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="agencias.html">Agencias</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="precios.html">Precios</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main class="blog-page">
+        
+        <div class="newspaper-header">
+            <h2 class="newspaper-title">EL VIAJERO FRECUENTE</h2>
+            <div class="newspaper-meta">
+                <span>Edición Semanal</span>
+                <span>-</span>
+                <span>Historias y Consejos de Viaje</span>
+            </div>
+        </div>
+
+        <input type="radio" id="tag-all" name="tags" class="hidden-radio" checked>
+        <input type="radio" id="tag-tips" name="tags" class="hidden-radio">
+        <input type="radio" id="tag-aventura" name="tags" class="hidden-radio">
+        <input type="radio" id="tag-dinero" name="tags" class="hidden-radio">
+
+        <div class="newspaper-layout">
+            
+            <aside class="sidebar">
+                <h3>Filtrar por Categoria</h3>
+                <div class="tags-container">
+                    <label for="tag-all" class="tag-label">Todos</label>
+                    <label for="tag-tips" class="tag-label">Tips de Viaje</label>
+                    <label for="tag-aventura" class="tag-label">Aventura</label>
+                    <label for="tag-dinero" class="tag-label">Presupuesto</label>
+                </div>
+
+                <div class="ad-space">
+                    
+                    <img src="https://www.supermaxi.com/wp-content/uploads/2024/08/7791293041599-4-1.jpg" alt="Nuevo Rexona" class="ad-image">
+                    
+                    <div class="ad-content">
+                        <h4>Rexona, nueva fragancia.</h4>
+
+                    </div>
+                </div>
+            </aside>
+
+            <div class="articles-grid">
+                
+                <article class="article-card featured aventura">
+                    <img src="https://cdn.prod.website-files.com/61549f9352f3558157a226ea/6283b66b308f4f71820364ca_backpackers.jpg" alt="Mochilero en montaña">
+                    <div class="article-content">
+                        <span class="tag-badge">Aventura</span>
+                        <h2>El arte de sobrevivir en la montaña sin perder el estilo</h2>
+                        <p class="dropcap">La preparación lo es todo. Cuando te enfrentas a las cumbres nevadas del sur, llevar el equipo correcto puede significar la diferencia entre el viaje de tus sueños y una experiencia para el olvido. En esta edición especial, desglosamos el kit básico de supervivencia...</p>
+                        
+                        <section class="comments-section">
+                            <h4>Comentarios (2)</h4>
+                            <div class="comment">
+                                <div class="avatar-css" data-initials="MP"></div>
+                                <div class="comment-text">
+                                    <strong>María Paz</strong>
+                                    <p>¡Excelente artículo! Me sirvió mucho para armar mi mochila.</p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="avatar-css" data-initials="LR"></div>
+                                <div class="comment-text">
+                                    <strong>Lucas Ríos</strong>
+                                    <p>Faltó mencionar la importancia del calzado impermeable.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="article-card tips">
+                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500" alt="Avión">
+                    <div class="article-content">
+                        <span class="tag-badge">Tips de Viaje</span>
+                        <h3>Cómo evitar el Jet Lag</h3>
+                        <p>Ajustar tu reloj biológico es crucial. Descubre los secretos para llegar fresco a tu destino, desde la hidratación hasta los horarios de sueño en el avión.</p>
+                    </div>
+                </article>
+
+                <article class="article-card dinero">
+                    <img src="https://www.clarin.com/img/2024/05/17/CpAXIlT7s_2000x1500__1.jpg" alt="Monedas">
+                    <div class="article-content">
+                        <span class="tag-badge">Presupuesto</span>
+                        <h3>Volar barato en 2026</h3>
+                        <p>Las aerolíneas low-cost han cambiado las reglas. Te enseñamos a usar navegadores en incógnito y alertas de precios para cazar las mejores ofertas de la temporada.</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <form>
+            <input type="email" placeholder="Tu email">
+            <button>Suscribirse</button>
+        </form>
+        <div class="redes">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?..." aria-hidden="false" tabindex="0"></iframe>
+    </footer>
+
+</body>
+</html>
