@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Turismo | Destinos</title>
+    <link rel="stylesheet" href="css/destinos.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+     <header>
+        <h1>Turismo</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="agencias.html">Agencias</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="precios.html">Precios</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main class="destinos-page">
+        <section class="filter-section">
+            <h2>Explora Nuestros Destinos</h2>
+            
+            <input type="radio" id="all" name="cat" class="hidden-radio" checked>
+            <label for="all" class="filter-label">Todos</label>
+
+            <input type="radio" id="playa" name="cat" class="hidden-radio">
+            <label for="playa" class="filter-label">Sol y Playa</label>
+
+            <input type="radio" id="nat" name="cat" class="hidden-radio">
+            <label for="nat" class="filter-label">Naturaleza</label>
+
+            <input type="radio" id="cul" name="cat" class="hidden-radio">
+            <label for="cul" class="filter-label">Cultural</label>
+
+            <input type="radio" id="gastro" name="cat" class="hidden-radio">
+            <label for="gastro" class="filter-label">Gastronómico</label>
+
+            <input type="radio" id="reli" name="cat" class="hidden-radio">
+            <label for="reli" class="filter-label">Religioso</label>
+
+            <div class="masonry-gallery" style="margin-top: 2rem;">
+                
+                <div class="item playa">
+                    <img src="https://blog.vivaaerobus.com/wp-content/uploads/2019/09/Playas-mas-bonitas-de-Mexico-Cancun.jpg" alt="Playa">
+                    <div class="overlay">
+                        <span>Caribe Mexicano</span>
+                        <a href="#modal-caribe" class="btn-reservar">Ver detalles</a>
+                    </div>
+                </div>
+
+                <div class="item nature tall">
+                    <img src="https://chileestuyo.cl/wp-content/uploads/2020/03/Parque-Nacioonal-Huerquehue.jpg" alt="Bosque">
+                    <div class="overlay">
+                        <span>Bosques del Sur</span>
+                        <a href="#modal-bosque" class="btn-reservar">Ver detalles</a>
+                    </div>
+                </div>
+
+                <div class="item culture">
+                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500" alt="Ruinas">
+                    <div class="overlay">
+                        <span>Ruinas Antiguas</span>
+                        <a href="#modal-generico" class="btn-reservar">Ver detalles</a>
+                    </div>
+                </div>
+
+                <div class="item nature">
+                    <img src="https://turismo-en-argentina.com/wp-content/uploads/2020/07/14074819238_6c00f7f002_o.jpg" alt="Cerro de los 7 colores">
+                    <div class="overlay">
+                        <span>Cerro de los 7 Colores</span>
+                        <a href="#modal-cerro" class="btn-reservar">Ver detalles</a>
+                    </div>
+                </div>
+
+                <div class="item gastro tall">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=500" alt="Comida">
+                    <div class="overlay">
+                        <span>Ruta del Vino</span>
+                        <a href="#modal-generico" class="btn-reservar">Ver detalles</a>
+                    </div>
+                </div>
+
+                <div class="item culture">
+                    <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=500" alt="Machu Picchu">
+                    <div class="overlay">
+                        <span>Machu Picchu</span>
+                        <a href="#modal-machu" class="btn-reservar">Ver detalles</a>
+                    </div>
+                </div>
+
+                <div class="item reli tall">
+                    <img src="https://3.bp.blogspot.com/-9PHeNMlkEp4/VBDe6oLGVUI/AAAAAAAAOgU/NEu7lUug9ho/s1600/templo-buda-esmeralda-tailandia.jpg" alt="Templo">
+                    <div class="overlay">
+                        <span>Templos Sagrados</span>
+                        <a href="#modal-generico" class="btn-reservar">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-section" style="margin-top: 5rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Tarifas Estimadas</h2>
+            <div class="table-container">
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>Categoría</th>
+                            <th>Vuelo Base</th>
+                            <th>Hospedaje (Noche)</th>
+                            <th>Paquete Completo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Caribe Mexicano</td>
+                            <td>Sol y Playa</td>
+                            <td>$450</td>
+                            <td>$120</td>
+                            <td>$1,200</td>
+                        </tr>
+                        <tr>
+                            <td>Bosques del Sur</td>
+                            <td>Naturaleza</td>
+                            <td>$200</td>
+                            <td>$80</td>
+                            <td>$600</td>
+                        </tr>
+                        <tr>
+                            <td>Cerro de los 7 Colores</td>
+                            <td>Naturaleza</td>
+                            <td>$150</td>
+                            <td>$50</td>
+                            <td>$400</td>
+                        </tr>
+                        <tr>
+                            <td>Ruta del Vino</td>
+                            <td>Gastronómico</td>
+                            <td>$300</td>
+                            <td>$150</td>
+                            <td>$950</td>
+                        </tr>
+                        <tr>
+                            <td>Machu Picchu</td>
+                            <td>Cultural</td>
+                            <td>$350</td>
+                            <td>$100</td>
+                            <td>$850</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="modal-caribe" class="css-lightbox">
+            <a href="#close" class="close-lightbox">✖</a>
+            <div class="lightbox-content">
+                <img src="https://blog.vivaaerobus.com/wp-content/uploads/2019/09/Playas-mas-bonitas-de-Mexico-Cancun.jpg" alt="Playa Grande">
+                <div class="lightbox-info">
+                    <h2>Caribe Mexicano</h2>
+                    <p style="margin: 1rem 0; line-height: 1.5;">Disfruta de las arenas blancas y el agua cristalina. Paquete todo incluido de 7 noches en resort 5 estrellas.</p>
+                    <span style="font-size: 1.5rem; color: var(--secondary-color); font-weight: bold;">$1,200</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-bosque" class="css-lightbox">
+            <a href="#close" class="close-lightbox">✖</a>
+            <div class="lightbox-content">
+                <img src="https://chileestuyo.cl/wp-content/uploads/2020/03/Parque-Nacioonal-Huerquehue.jpg" alt="Bosque Grande">
+                <div class="lightbox-info">
+                    <h2>Bosques del Sur</h2>
+                    <p style="margin: 1rem 0; line-height: 1.5;">Conexión total con la naturaleza. Ideal para senderismo. Incluye cabaña y excursiones guiadas.</p>
+                    <span style="font-size: 1.5rem; color: var(--secondary-color); font-weight: bold;">$600</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-cerro" class="css-lightbox">
+            <a href="#close" class="close-lightbox">✖</a>
+            <div class="lightbox-content">
+                <img src="https://i.pinimg.com/originals/60/53/7f/60537f894d4a8213f1027f6d6591f4f7.jpg" alt="Cerro de los 7 colores grande">
+                <div class="lightbox-info">
+                    <h2>Cerro de los 7 Colores</h2>
+                    <p style="margin: 1rem 0; line-height: 1.5;">Descubre la magia del norte en Purmamarca. Un paisaje vibrante ideal para la fotografía, disfrutar de la gastronomía y la cultura local.</p>
+                    <span style="font-size: 1.5rem; color: var(--secondary-color); font-weight: bold;">$400</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-machu" class="css-lightbox">
+            <a href="#close" class="close-lightbox">✖</a>
+            <div class="lightbox-content">
+                <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?w=800" alt="Machu Picchu grande">
+                <div class="lightbox-info">
+                    <h2>Machu Picchu</h2>
+                    <p style="margin: 1rem 0; line-height: 1.5;">Aventúrate en el corazón del antiguo imperio Inca. El paquete incluye tren panorámico, entrada a la ciudadela y guía bilingüe.</p>
+                    <span style="font-size: 1.5rem; color: var(--secondary-color); font-weight: bold;">$850</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-generico" class="css-lightbox">
+            <a href="#close" class="close-lightbox">✖</a>
+            <div class="lightbox-content">
+                <div class="lightbox-info" style="width: 100%; text-align: center;">
+                    <h2>Más información próximamente</h2>
+                    <p>Estamos actualizando los detalles de este paquete.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <form>
+            <input type="email" placeholder="Tu email">
+            <button>Suscribirse</button>
+        </form>
+    
+        <div class="redes">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    
+        <iframe src="https://www.google.com/maps/embed?..." aria-hidden="false" tabindex="0"></iframe>
+    </footer>
+
+</body>
+</html>
