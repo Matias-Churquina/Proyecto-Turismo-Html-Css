@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto|Turismo</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+
+<body>
+    <header>
+        <h1>Turismo</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="agencias.html">Agencias</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="precios.html">Precios</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+    </header>
+    <section class="section contacto">
+        <div class="container">
+            <h2 class="titulo-contacto">Contacto</h2>
+
+            <form class="form-contacto" id="formulario">
+
+                <div class="grupo">
+                    <label>Nombre</label>
+                    <input type="text" placeholder="Eleonor Rigby" required>
+                </div>
+
+                <div class="grupo">
+                    <label>Email</label>
+                    <input type="email" placeholder="eleonor@email.com" required>
+                </div>
+
+                <div class="grupo">
+                    <label>Mensaje</label>
+                    <textarea placeholder="Escriba su mensaje..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">
+                    Enviar mensaje
+                </button>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- LOADING -->
+    <div class="loading" id="loading">
+        <div class="spinner-big"></div>
+        <p>Enviando...</p>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal-box">
+            <h3>¡Mensaje enviado!</h3>
+            <p>Gracias por contactarnos. Nos comunicaremos pronto.</p>
+            <button id="cerrarModal">Cerrar</button>
+        </div>
+    </div>
+    <footer>
+        <form>
+            <input type="email" placeholder="Tu email">
+            <button>Suscribirse</button>
+        </form>
+    
+        <div class="redes">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+    
+        <iframe src="https://www.google.com/maps/embed?...">
+        </iframe>
+    </footer>
+    <script src="js/contacto.js"></script>
+</body>
+</html>
