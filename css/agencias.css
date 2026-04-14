@@ -1,0 +1,150 @@
+/* TÍTULO */
+.titulo-agencias {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--color-principal);
+}
+
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.grid-agencias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+}
+
+/* CARD */
+.card-agencia {
+    perspective: 1000px;
+    transition: transform 0.3s;
+}
+
+/* CONTENEDOR INTERNO */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* EFECTO FLIP */
+.card-agencia:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-agencia:hover .card-front {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* CARAS */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+/* FRENTE */
+.card-front {
+    background: white;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    border: 1px solid #eeeff3;
+}
+
+.card-front img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+
+    /* EXTRA: clip-path (suma puntos) */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.card-front h3 {
+    margin-top: 10px;
+}
+
+/* ATRÁS */
+.card-back {
+    background: var(--color-principal);
+    color: white;
+    transform: rotateY(180deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+/* BOTÓN */
+.btn-ver {
+    background: var(--color-secundario);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ⭐ RATING */
+.rating {
+    display: flex;
+    gap: 5px;
+    font-size: 25px;
+    color: #ccc;
+}
+
+.rating span {
+    color: gold;
+}
+
+/* OCULTAR INPUTS */
+.rating input {
+    display: none;
+}
+
+/* ESTRELLAS */
+.rating label {
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER */
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+
+/* SELECCIONADO */
+.rating input:checked ~ label {
+    color: gold;
+}
+
+/* MICRO-INTERACCIÓN */
+.rating label:active {
+    transform: scale(1.3);
+}
+
+.card-agencia {
+    animation: aparecer 0.6s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
