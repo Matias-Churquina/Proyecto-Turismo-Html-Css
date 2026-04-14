@@ -1,0 +1,204 @@
+
+:root {
+    --primary-color: #2b6cb0;
+    --secondary-color: #f6ad55;
+    --dark-bg: #1a202c;
+    --light-bg: #f5f7f6; 
+    --text-main: #333;   
+    --text-light: #edf2f7;
+    --font-base: 'Segoe UI', Tahoma, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.destinos-page {
+    padding: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* --- LOGICA DE BOTONES DE FILTRO --- */
+.hidden-radio {
+    display: none; 
+}
+
+.filter-label {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: #e2e8f0;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0 0.5rem 1rem;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.hidden-radio:checked + .filter-label {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* --- GALERIA MASONRY --- */
+.masonry-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+
+.item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item.tall {
+    grid-row: span 2;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-reservar {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.item:hover .btn-reservar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- LOGICA DE FILTRADO  --- */
+#all:checked ~ .masonry-gallery .item { display: block; }
+#playa:checked ~ .masonry-gallery .item:not(.playa) { display: none; }
+#nat:checked ~ .masonry-gallery .item:not(.nature) { display: none; }
+#cul:checked ~ .masonry-gallery .item:not(.culture) { display: none; }
+#gastro:checked ~ .masonry-gallery .item:not(.gastro) { display: none; }
+#reli:checked ~ .masonry-gallery .item:not(.reli) { display: none; }
+
+/* --MODALES (LIGHTBOX)-- */
+.css-lightbox {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none; /* Evita clics cuando esta oculto */
+    transition: opacity 0.4s ease;
+}
+
+.css-lightbox:target {
+    opacity: 1;
+    pointer-events: auto; /* Permite clics cuando esta visible */
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px; right: 40px;
+    color: white;
+    font-size: 3rem;
+}
+
+.lightbox-content {
+    display: flex;
+    background: white;
+    max-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.lightbox-content img {
+    width: 60%;
+    object-fit: cover;
+}
+
+.lightbox-info {
+    padding: 2rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--dark-bg);
+    color: white;
+}
+
+/* --TABLA RESPONSIVA DE PRECIOS-- */
+.table-container {
+    width: 100%;
+    overflow-x: auto; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 600px; 
+}
+
+.responsive-table th, 
+.responsive-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.responsive-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+}
+
+.responsive-table tbody tr:hover {
+    background-color: var(--light-bg);
+    transition: 0.3s;
+}
