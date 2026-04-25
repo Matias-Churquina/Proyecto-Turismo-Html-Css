@@ -1,21 +1,8 @@
 /* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Tipografía y fondo */
-body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: #f5f7f6; /* color claro */
-    color: #333;
-}
 
-/* Contenedor principal */
-main {
-    padding: 20px;
-}
+
 
 /* Links generales */
 a {
@@ -29,6 +16,7 @@ a {
     position: relative;
     height: 50vh;
     overflow: hidden;
+    
 }
 
 .hero video {
@@ -37,6 +25,14 @@ a {
     object-fit: cover;
 }
 
+.desc {
+    font-size: 60px;
+    margin-bottom: 10px;
+    text-shadow: #333333 4px 4px 5px;
+}
+.viaj {
+    font-size: 24px;
+}
 .overlay {
     color: #e7e7e7;
     font-family: 'Arial Black', Gadget, sans-serif;
@@ -46,6 +42,8 @@ a {
     transform: translate(-50%, -50%);
     text-align: center;
     animation: fadeIn 2s ease;
+    background-color: #ffffff;
+    border-radius: 20px;
 }
 
 .hero::before {
@@ -55,79 +53,71 @@ a {
     height: 100%;
     background: rgba(0,0,0,0.4);
 }
+/*
 @keyframes fadeIn {
     from { opacity: 0; transform: translate(-50%, -60%); }
     to { opacity: 1; transform: translate(-50%, -50%); }
 }
+*/
 
 
 
 /* seccion de tarjetas */
 
-.cards {
-    display: flex;
-    gap: 20px;
-    padding: 20px;text-align: center;
+.DestinoT {
+
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    color: #1e3a5f;
+    border: 2px solid #1e3a5f;
+    border-color: #1e3a5f transparent;
 }
 
-.card {
-    background: rgb(156, 177, 185);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.3s;
-    width: 200px;
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.card img {
-    width: 100%;
+.card-hover:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.card:hover {
-    transform: scale(1.05);
+.card-hover img {
+  height: 200px;
+  object-fit: cover;
 }
+
+
+
+
+
+
+
 
 /*seccion de contador*/
 
-.contador {
-    text-align: center;
-    padding: 30px;
+.linea {
+    display: flex;
+    justify-content: center;
 }
 
-.contador h2 {
-    font-size: 40px;
-    animation: crecer 2s ease;
+.contador h2{
+    margin: 0px 0px 20px 0px;
+    padding: 10px 20px;
+    font-size: 48px;
+    color:rgb(0, 0, 0);
+    border-radius: 20px;
 }
 
-@keyframes crecer {
+/*@keyframes crecer {
     from { letter-spacing: 10px; opacity: 0; }
     to { letter-spacing: 1px; opacity: 1; }
-}
+    }
+*/
 
 
 /*seccion de carrusel*/
 
-.carousel {
-    overflow: hidden;
-    width: 100%;
-}
-
-.slides {
-    display: flex;
-    width: 300%;
-    animation: slide 9s infinite;
-}
-
-.slide {
-    color: #333333;
-    font-family: 'Arial Black', Gadget, sans-serif;
-    width: 100%;
-    text-align: center;
-    padding: 40px;
-}
-
-@keyframes slide {
-    
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-40%); }
-    66% { transform: translateX(-60%); }
-}

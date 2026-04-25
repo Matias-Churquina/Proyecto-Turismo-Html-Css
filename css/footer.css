@@ -1,56 +1,82 @@
-footer {
+.footer {
     background: #1e3a5f;
     color: white;
-    padding: 20px;
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-box {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-box h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.footer button {
+    padding: 10px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.footer button:hover {
+    background: #0b5ed7;
+}
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.redes a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
     text-align: center;
 }
 
-footer input {
-    padding: 10px;
-    margin: 5px;
-}
-
-footer button {
-    background: #8b5e3c;
-    color: white;
-    padding: 10px;
-    border: none;
-}
-
-iframe {
-    width: 60%;
-    height: 200px;
-    margin-top: 15px;
-}
-
-/* Contenedor */
-.redes {
-    margin-top: 15px;
-}
-
-/* Botón base */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 25px;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-/* Facebook */
 .facebook {
     background: #1877f2;
 }
 
-/* Instagram (degradado) */
 .instagram {
-    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+    background: #e1306c;
 }
 
-/* Hover efecto */
-.btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.footer iframe {
+    width: 100%;
+    height: 180px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 30px;
+    color: #aaa;
 }

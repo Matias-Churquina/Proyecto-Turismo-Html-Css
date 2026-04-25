@@ -1,70 +1,13 @@
-header {
-    background: linear-gradient(90deg, #1e3a5f, #3b82a0); /* azul */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    z-index: 1000;
-}
+ .mega-menu {
+        width: 700px;
+        padding: 20px;
+    }
 
-/* Título */
-header h1 {
-    margin-bottom: 10px;
-}
+    .mega-menu h6 {
+        font-weight: bold;
+        color: #0d6efd;
+    }
 
-/* Navegación */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    gap: 15px;
-}
-
-/* Links del menú */
-nav a {
-    background-color: #8b5e3c; /* marrón */
-    padding: 8px 15px;
-    border-radius: 20px;
-    transition: 0.3s;
-    color: white;
-}
-
-/* Hover */
-nav a:hover {
-    background-color: #a47148; /* marrón más claro */
-    transform: scale(1.05);
-}
-
-/* Contenedor del dropdown */
-.dropdown {
-    position: relative;
-}
-
-/* Contenido oculto */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 30px;
-    background-color: white;
-    min-width: 150px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-/* Links internos */
-.dropdown-content a {
-    display: block;
-    padding: 10px;
-    color: black;
-    background: white;
-}
-
-/* Hover en opciones */
-.dropdown-content a:hover {
-    background-color: #eee;
-}
-
-/* Mostrar menú al pasar el mouse */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+    .navbar-nav .nav-link {
+        font-weight: 500;
+    }

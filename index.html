@@ -1,112 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Turismo</title>
 
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
 </head>
 
 <body>
-
-      <header>
-        <h1>Turismo</h1>
-        <nav>
-            <a href="index.html">Home</a>
-
-            <div class="dropdown">
-                <a href="destinos.html">Destinos</a>
-
-                <div class="dropdown-content">
-                    <a href="#">Playas</a>
-                    <a href="#">Montañas</a>
-                    <a href="#">Ciudades</a>
-                </div>
-            </div>
-
-            <a href="agencias.html">Agencias</a>
-            <a href="precios.html">Precios</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="blog.html">Blog</a>
-        </nav>
-    </header>
+    <header></header>
 
     <main>
         <!-- contenido -->
-         
+
         <section class="hero">
             <video autoplay muted loop>
-                <source src="Contenido/HomeC/PinDown.io_@filholuciano053_1776106072.mp4" type="video/mp4">
+                <source src="Contenido/HomeC/PinDown.io_@filholuciano053_1776106072.mp4" type="video/mp4" />
             </video>
 
-            <div class="overlay">
-                <h2>Descubrí el mundo</h2>
-                <p>Viajes únicos e inolvidables</p>
+            <div class="opacity-25 overlay" >
+                <h2 class="desc">Descubrí el mundo</h2>
+                <p class="viaj">Viajes únicos e inolvidables</p>
             </div>
         </section>
 
-        <section class="cards">
-            <div class="card">
-                <img src="Contenido/HomeC/playa.jpeg">
-                <h3>Playa</h3>
-            </div>
 
-            <div class="card">
-                <img src="Contenido/HomeC/montana.jpeg">
-                <h3>Montaña</h3>
-            </div>
-            <div class="card">
-                <img src="Contenido/HomeC/Barcelona in golden hour ✨.jpeg">
-                <h3>ciudad</h3>
-            </div>
-            <div class="card">
-                <img src="Contenido/HomeC/CANCÚN (MÉXICO).jpeg">
-                <h3>Mares</h3>
-            </div>
-            <div class="card">
-                <img src="Contenido/HomeC/descarga (4).jpeg">
-                <h3>Bosque</h3>
+
+        <section class="container my-5">
+            <h1 class="DestinoT">Destinos Destacados</h1>
+            <div class="row g-4">
+
+                <!-- Playa -->
+                <div class="col-12 col-md-8 col-lg-3">
+                    <div class="card card-hover h-100 shadow-sm">
+                        <img src="Contenido/HomeC/playa.jpeg" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Playa</h5>
+                            <p class="card-text">Relajate con el mar y el sol.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Montaña -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="card card-hover h-100 shadow-sm">
+                        <img src="Contenido/HomeC/montana.jpeg" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Montaña</h5>
+                            <p class="card-text">Aventura en la naturaleza.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mares -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="card card-hover h-100 shadow-sm">
+                        <img src="Contenido/HomeC/CANCÚN (MÉXICO).jpeg" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Mares</h5>
+                            <p class="card-text">Aguas cristalinas increíbles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bosque -->
+                <div class="col-12 col-md-4 col-lg-3">
+                    <div class="card card-hover h-100 shadow-sm">
+                        <img src="Contenido/HomeC/descarga (4).jpeg" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Bosque</h5>
+                            <p class="card-text">Conectá con la naturaleza.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <section class="contador">
-            <h2>500+ visitantes</h2>
-        </section>
-
-        <section class="carousel">
-            <div class="slides">
-                <div class="slide">"Excelente viaje!"</div>
-                <div class="slide">"Muy recomendable"</div>
-                <div class="slide">"Volvería sin dudar"</div>
-                <div class="slide">"Esta Pagina es increible!"</div>
+            <div class="linea">
+                <h2><span id="numero">0</span>+ visitantes</h2>
             </div>
         </section>
 
+        <section class="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+                </div>
+
+                <div class="carousel-inner text-center">
+
+                    <div class="carousel-item active">
+                        <div class="p-5 bg-dark text-white">
+                            <h2>Excelente viaje!</h2>
+                            <p>La mejor experiencia de nuestras vacaciones.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="p-5 bg-primary text-white">
+                            <h2>Muy recomendable</h2>
+                            <p>Todo organizado y excelente atención.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="p-5 bg-success text-white">
+                            <h2>Volvería sin dudar</h2>
+                            <p>Destinos increíbles y precios accesibles.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="p-5 bg-info text-white">
+                            <h2>El mejor sitio de viajes!</h2>
+                            <p>Es la mejor opción para planear mis vacaciones.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <form>
-            <input type="email" placeholder="Tu email">
-            <button>Suscribirse</button>
-        </form>
+    <footer></footer>
 
-        <div class="redes">
-            <a href="#" class="btn facebook">Facebook</a>
-            <a href="#" class="btn instagram">Instagram</a>
-        </div>
-
-        <iframe src="https://www.google.com/maps?q=Jujuy&output=embed"></iframe>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Animacion del Hero -->
+<script>
+    $(document).ready(function () {
+
+        $(".desc").hide().slideDown(1200);
+
+        $(".viaj").hide().delay(1000).fadeIn(2000);
+
+    });
+</script>
+<!-- Carga de header y footer -->
+<script>
+    $(document).ready(function () {
+        $("header").load("header.html");
+        $("footer").load("footer.html");
+    });
+</script>
+
+<!-- Animacion del contador -->
+<script>
+$(document).ready(function(){
+
+    $({contador: 0}).animate({contador: 500}, {
+        duration: 6000,
+        easing: "swing",
+        step: function(valor){
+            $("#numero").text(Math.floor(valor));
+        }
+    });
+
+});
+</script>
 
 </html>
