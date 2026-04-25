@@ -1,66 +1,45 @@
 <header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-<div class="container">
-
-    <a class="navbar-brand" href="#">Turismo</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-
-            <!-- Mega menú -->
-            <li class="nav-item dropdown position-static">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                    Servicios
-                </a>
-
-                <div class="dropdown-menu mega-menu shadow">
-                    <div class="row">
-
-                        <div class="col-md-4">
-                            <h6>Destinos</h6>
-                            <a class="dropdown-item" href="#">Playas</a>
-                            <a class="dropdown-item" href="#">Montañas</a>
-                            <a class="dropdown-item" href="#">Ciudades</a>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h6>Agencias</h6>
-                            <a class="dropdown-item" href="#">Paquetes</a>
-                            <a class="dropdown-item" href="#">Excursiones</a>
-                            <a class="dropdown-item" href="#">Reservas</a>
-                        </div>
-
-                        <div class="col-md-4">
-                            <h6>Precios</h6>
-                            <a class="dropdown-item" href="#">Ofertas</a>
-                            <a class="dropdown-item" href="#">Promociones</a>
-                            <a class="dropdown-item" href="#">Temporada Alta</a>
-                        </div>
-
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-
-        </ul>
-    </div>
-
-</div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="#">Turismo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Servicios
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <ul>
+                                    <li><a>Destinos</a></li>
+                                    <a class="dropdown-item" href="destinos.html">Playas</a>
+                                    <a class="dropdown-item" href="tours.html">Montañas</a>
+                                    <a class="dropdown-item" href="hoteles.html">Bosques</a>
+                                </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="agencias.html">Agencias</a></li>
+                            <li><a class="dropdown-item" href="precios.html">Precios</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-icon">
+                        <img src="https://i.pinimg.com/736x/67/11/3d/67113d571f96d042b266d200cb217949.jpg" alt="User Icon" class="user-icon">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
-
