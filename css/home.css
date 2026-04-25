@@ -34,7 +34,7 @@ a {
     font-size: 24px;
 }
 .overlay {
-    color: #e7e7e7;
+    color: #dfdadac7;
     font-family: 'Arial Black', Gadget, sans-serif;
     position: absolute;
     top: 50%;
@@ -42,8 +42,6 @@ a {
     transform: translate(-50%, -50%);
     text-align: center;
     animation: fadeIn 2s ease;
-    background-color: #ffffff;
-    border-radius: 20px;
 }
 
 .hero::before {
