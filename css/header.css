@@ -9,7 +9,7 @@
 }
 
 .nav-link:hover {
-    color: #ffc107 !important;
+    color: #ffc507e1 !important;
     transform: translateY(-2px);
 }
 
@@ -18,19 +18,19 @@
 }
 
 .logo {
-    letter-spacing: 2px;
     width: 100px;
+    font-family: 'Arial Black';
+    color: #ffffffb6;
+    text-decoration: none;
+    transition: .3s;
+}
+.logo:hover {
+    color: #ffd700;          /* cambia el color al pasar el mouse */
+    text-decoration: underline; /* opcional: subrayado solo en hover */
+    text-decoration: none;
+    transform: translateY(-2px);
 }
 
-.user-icon {
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-}
-.nav-icon {
-    display: flex;
-    align-items: right;
-    margin-left: 20px;
-    margin-top: 5px;
-    border-color: rgb(216, 233, 233);
+.ic {
+    margin-right: 10px;
 }

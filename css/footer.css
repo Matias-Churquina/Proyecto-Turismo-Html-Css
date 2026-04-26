@@ -40,6 +40,8 @@
     border: none;
     border-radius: 8px;
     cursor: pointer;
+     text-decoration: none;
+    font-family: "Arial Black";
 }
 
 .footer button:hover {
@@ -49,11 +51,12 @@
 .redes {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .redes a {
     text-decoration: none;
+    font-family: "Arial Black";
     color: white;
     padding: 10px;
     border-radius: 8px;
@@ -64,8 +67,16 @@
     background: #1877f2;
 }
 
+.facebook:hover {
+    background: #0f66e0;
+}
+
 .instagram {
     background: #e1306c;
+}
+
+.instagram:hover {
+    background: #bb154c;
 }
 
 .footer iframe {
