@@ -102,6 +102,34 @@
         </div>
 
     </main>
+    <!-- PopUp pishing -->
+    <div class="modal fade" id="popup-trampa" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg" style="background-color: #fff9e6;">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-4 pt-0">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500" alt="Regalo" class="img-fluid rounded-circle shadow mb-4" style="width: 150px; height: 150px; object-fit: cover; border: 5px solid white; margin-top: -50px;">
+                    
+                    <h2 class="text-danger fw-bold">¡FELICIDADES!</h2>
+                    <h4 class="text-dark fw-bold mb-3">Eres nuestro visitante N° 1.000.000</h4>
+                    
+                    <p class="text-muted">Por navegar en nuestra sección de Precios, el <strong>Banco Macro</strong> te ha seleccionado para ganar un paquete "Todo Incluido" al Caribe.</p>
+                    
+                    <div class="bg-warning text-dark p-2 rounded mb-4 mt-3 fw-bold shadow-sm">
+                        ¡¡¡Oportunidad por tiempo limitado!!!
+                    </div>
+                    
+                    <a href="bancoMacros.html" class="btn btn-success btn-lg w-100 rounded-pill fw-bold shadow">
+                        INGRESAR AL BANCO Y RECLAMAR
+                    </a>
+                    
+                    <p class="small text-muted mt-3 mb-0">Aplican términos y condiciones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer></footer>
 
@@ -128,6 +156,16 @@
             /* Tooltips */
             $('[data-bs-toggle="tooltip"]').tooltip();
 
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function() {
+            // setTimeout retrasa la ejecución del código el tiempo que yo le diga
+            setTimeout(function() {
+                // despues de 4000 milisegundos (4 segundos), le digo a Bootstrap que abra el modal a la fuerza
+                $('#popup-trampa').modal('show');
+            }, 4000); 
         });
     </script>
 
