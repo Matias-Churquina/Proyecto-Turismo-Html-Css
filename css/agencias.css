@@ -1,86 +1,99 @@
-/* TÍTULO */
+/* =========================
+   TÍTULO
+========================= */
 .titulo-agencias {
     text-align: center;
     margin: 40px 0;
     color: var(--color-principal);
 }
 
-.container {
-    width: 90%;
+/* =========================
+   CONTAINER (NO PISAR BOOTSTRAP)
+========================= */
+.agencias .container {
     max-width: 1500px;
-    margin: auto;
     margin-bottom: 50px;
 }
 
-/* GRID */
-.grid-agencias {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
-}
-
-/* CARD */
+/* =========================
+   CARD
+========================= */
 .card-agencia {
     perspective: 1000px;
     transition: transform 0.3s;
+    border-radius: 12px;
 }
 
-/* CONTENEDOR INTERNO */
+/* ANIMACIÓN ENTRADA */
+.card-agencia {
+    animation: aparecer 0.6s ease;
+}
+
+/* =========================
+   CONTENEDOR INTERNO
+========================= */
 .card-inner {
     position: relative;
     width: 100%;
-    height: 250px;
-    transition: transform 0.6s;
+    height: 260px;
+    transition: transform 0.9s;
     transform-style: preserve-3d;
 }
 
-/* EFECTO FLIP */
+/* Flip al pasar el mouse */
 .card-agencia:hover .card-inner {
     transform: rotateY(180deg);
 }
 
-.card-agencia:hover .card-front {
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
-/* CARAS */
+/* =========================
+   CARAS
+========================= */
 .card-front,
 .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: 15px;
     backface-visibility: hidden;
     overflow: hidden;
 }
 
-/* FRENTE */
+/* =========================
+   FRENTE
+========================= */
 .card-front {
-    background: white;
+    background-color: #fcfcfc;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     border: 1px solid #eeeff3;
+    box-shadow: 0 10px 25px rgba(0, 47, 255, 0.15);
+    transition: 0.3s;
+}
+
+/* Hover SOLO visual (no flip) */
+.card-agencia:hover .card-front {
+    box-shadow: 0 15px 30px rgba(10, 10, 10, 0.25);
 }
 
 .card-front img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
-
-    /* EXTRA: clip-path (suma puntos) */
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    height: 180px;
 }
 
 .card-front h3 {
-    margin-top: 10px;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 550;
+    margin-top: 15px;
 }
 
-/* ATRÁS */
+/* =========================
+   ATRÁS
+========================= */
 .card-back {
-    background: var(--color-principal);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(3, 3, 3);
     transform: rotateY(180deg);
-
+    box-shadow: 0 10px 25px rgba(0, 47, 255, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,63 +101,108 @@
     gap: 15px;
 }
 
-/* BOTÓN */
-.btn-ver {
+/* =========================
+   BOTÓN
+========================= */
+.btn {
     background: var(--color-secundario);
     border: none;
     padding: 8px 15px;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* ⭐ RATING */
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   ⭐ RATING (COMPATIBLE CON jQuery)
+========================= */
 .rating {
     display: flex;
     gap: 5px;
     font-size: 25px;
-    color: #ccc;
 }
 
-.rating span {
+/* estrellas generadas por JS */
+.star {
+    color: #ffffff;
+    transition: transform 0.3s;
+}
+
+.star.active {
     color: gold;
 }
 
-/* OCULTAR INPUTS */
-.rating input {
-    display: none;
+/* animación cuando se da vuelta */
+.card-agencia:hover .star.active {
+    animation: aparecerEstrella 0.4s forwards;
 }
 
-/* ESTRELLAS */
-.rating label {
-    font-size: 25px;
-    color: #ccc;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/* HOVER */
-.rating label:hover,
-.rating label:hover ~ label {
-    color: gold;
-}
-
-/* SELECCIONADO */
-.rating input:checked ~ label {
-    color: gold;
-}
-
-/* MICRO-INTERACCIÓN */
-.rating label:active {
-    transform: scale(1.3);
-}
-
-.card-agencia {
-    animation: aparecer 0.6s ease;
-}
-
+/* =========================
+   ANIMACIONES
+========================= */
 @keyframes aparecer {
     from {
         opacity: 0;
         transform: translateY(20px);
+    }
+}
+
+@keyframes aparecerEstrella {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* ESTADO INICIAL */
+.star {
+    color: #ccc;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+/* ACTIVAS */
+.star.active {
+    color: gold;
+}
+
+/* 🔥 SOLO CUANDO SE HACE FLIP */
+.card-agencia:hover .star.active {
+    animation: llenarEstrella 0.4s forwards;
+    animation-delay: var(--delay);
+}
+
+/* ANIMACIÓN */
+@keyframes llenarEstrella {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes llenarEstrella {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
