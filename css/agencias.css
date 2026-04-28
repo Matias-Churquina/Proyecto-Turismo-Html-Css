@@ -9,9 +9,6 @@
     animation: fadeDown 0.8s ease;
 }
 
-/* =========================
-   CONTAINER (NO PISAR BOOTSTRAP)
-========================= */
 .agencias .container {
     max-width: 1500px;
     margin-bottom: 50px;
@@ -26,7 +23,6 @@
     border-radius: 12px;
 }
 
-/* ANIMACIÓN ENTRADA */
 .card-agencia {
     animation: aparecer 0.6s ease;
 }
@@ -42,7 +38,6 @@
     transform-style: preserve-3d;
 }
 
-/* Flip al pasar el mouse */
 .card-agencia:hover .card-inner {
     transform: rotateY(180deg);
 }
@@ -71,7 +66,6 @@
     transition: 0.3s;
 }
 
-/* Hover SOLO visual (no flip) */
 .card-agencia:hover .card-front {
     box-shadow: 0 15px 30px rgba(10, 10, 10, 0.25);
 }
@@ -120,7 +114,7 @@
 }
 
 /* =========================
-   ⭐ RATING (COMPATIBLE CON jQuery)
+   RATING 
 ========================= */
 .rating {
     display: flex;
@@ -177,7 +171,7 @@
     color: gold;
 }
 
-/* 🔥 SOLO CUANDO SE HACE FLIP */
+/* CUANDO SE HACE FLIP */
 .card-agencia:hover .star.active {
     animation: llenarEstrella 0.4s forwards;
     animation-delay: var(--delay);
