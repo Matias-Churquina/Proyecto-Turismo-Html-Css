@@ -1,148 +1,248 @@
-/* TÍTULO */
+/* ==========================================================
+   CONTACTO - BOOTSTRAP + ANIMACIONES
+========================================================== */
+
+.contacto {
+    min-height: 100vh;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f4f8ff 0%, #e8f0ff 100%);
+}
+
 .titulo-contacto {
-    text-align: center;
-    margin-bottom: 15px;
     color: var(--color-principal);
-    margin-top: 40px
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+    animation: fadeDown 0.8s ease;
 }
 
-/* FORM */
+.titulo-contacto::after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 5px;
+    margin: 18px auto 0;
+    border-radius: 50px;
+    background: linear-gradient(
+        90deg,
+        var(--color-principal),
+        var(--color-secundario)
+    );
+}
+
+/* ==========================================================
+   FORMULARIO
+========================================================== */
+
 .form-contacto {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 25px;
+    border: none;
+    animation: fadeUp 0.9s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* CAMPOS */
-.grupo {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.form-label {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.6rem;
 }
 
-.grupo label {
-    font-weight: bold;
+.form-control {
+    padding: 14px 18px;
+    border: 2px solid #dce3ec;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+    box-shadow: none;
 }
 
-.grupo input,
-.grupo textarea {
-    padding: 14px;
-    border-radius: 8px;
-    border: 2px solid #ddd;
-    font-size: 14px;
+.form-control:focus {
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+    transform: translateY(-2px);
 }
 
-.grupo textarea {
-    min-height: 120px;
+textarea.form-control {
     resize: none;
 }
 
-/* VALIDACIÓN */
-/* ESTADO INICIAL */
-.grupo input,
-.grupo textarea {
-    border: 2px solid #1e3a5f;
-}
+/* ==========================================================
+   BOTÓN
+========================================================== */
 
-/* MIENTRAS ESTÁ ESCRIBIENDO */
-.grupo input:focus,
-.grupo textarea:focus {
-    border-color: #1e3a5f;
-}
-
-/* CUANDO YA ESCRIBIÓ ALGO Y ES INVÁLIDO */
-.grupo input:not(:placeholder-shown):invalid,
-.grupo textarea:not(:placeholder-shown):invalid {
-    border-color: red;
-}
-
-/* CUANDO ES VÁLIDO */
-.grupo input:not(:placeholder-shown):valid,
-.grupo textarea:not(:placeholder-shown):valid {
-    border-color: green;
-}
-
-/* BOTÓN */
 .btn-enviar {
-    background: var(--color-principal);
-    color: white;
-    padding: 15px;
+    padding: 16px;
+    border-radius: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    background: linear-gradient(
+        135deg,
+        var(--color-principal),
+        #0b5ed7
+    );
+    transition: all 0.3s ease;
 }
 
 .btn-enviar:hover {
-    background: #087f83;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(13, 110, 253, 0.35);
 }
 
-/* LOADING FULLSCREEN */
+/* ==========================================================
+   LOADING
+========================================================== */
+
 .loading {
     position: fixed;
     inset: 0;
-
-    background: rgba(255, 255, 255, 0.6); /* transparencia */
-    
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(6px);
     display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-
-    z-index: 999;
+    z-index: 9999;
+    color: white;
 }
 
-/* SPINNER GRANDE */
-.spinner-big {
-    width: 80px;
-    height: 80px;
-    border: 8px solid #ddd;
-    border-top: 8px solid var(--color-principal);
-    border-radius: 50%;
-    animation: girar 1s linear infinite;
-    margin-bottom: 20px;
+.loading.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
 }
 
-@keyframes girar {
-    100% {
-        transform: rotate(360deg);
+.loading .spinner-border {
+    width: 5rem;
+    height: 5rem;
+}
+
+.loading p {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.modal-content {
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    animation: zoomIn 0.4s ease;
+}
+
+.modal-title {
+    color: var(--color-principal);
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.modal-body p {
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+.modal-footer .btn {
+    min-width: 140px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* ==========================================================
+   ANIMACIONES
+========================================================== */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* MODAL */
-.modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-    display: none;
-    justify-content: center;
-    align-items: center;
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* CAJA */
-.modal-box {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    width: 300px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* BOTÓN MODAL */
-.modal-box button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #1e3a5f;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 992px) {
+    .contacto {
+        padding: 60px 20px;
+    }
+
+    .form-contacto {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo-contacto {
+        font-size: 2.5rem;
+    }
+
+    .form-contacto {
+        padding: 2rem;
+        border-radius: 20px;
+    }
+
+    .btn-enviar {
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contacto {
+        padding: 40px 15px;
+    }
+
+    .titulo-contacto {
+        font-size: 2rem;
+    }
+
+    .form-contacto {
+        padding: 1.5rem;
+    }
+
+    .loading p {
+        font-size: 1.1rem;
+    }
 }
