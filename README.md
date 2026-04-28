@@ -143,7 +143,7 @@ Este proyecto está disponible bajo la licencia MIT.
 
 ## 👨‍💻 Autor
 
-**Matias Churquina**
+**Matias Daniel Churquina, Lucas Enrique Cari, Rodrigo Alexis Guanactolay **
 
 ## 🔗 Enlaces Útiles
 
