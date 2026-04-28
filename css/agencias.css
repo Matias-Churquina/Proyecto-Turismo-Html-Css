@@ -5,6 +5,8 @@
     text-align: center;
     margin: 40px 0;
     color: var(--color-principal);
+    font-weight: bold;
+    animation: fadeDown 0.8s ease;
 }
 
 /* =========================
@@ -81,9 +83,9 @@
 
 .card-front h3 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 550;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 /* =========================

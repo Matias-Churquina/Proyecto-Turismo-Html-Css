@@ -10,8 +10,8 @@
 
 .titulo-contacto {
     color: var(--color-principal);
-    font-size: clamp(2.2rem, 5vw, 3.5rem);
-    font-weight: 700;
+    font-size: 2.2rem;
+    font-weight: bold;
     margin-bottom: 3rem;
     position: relative;
     animation: fadeDown 0.8s ease;
